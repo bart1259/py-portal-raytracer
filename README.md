@@ -1,6 +1,6 @@
 # Portal Raytracer
 
-Raytracer built using OpenCL and Pygame (to render the output to a window). It supports portals allowing you "non-Euclidean" rendering, where you can see through portals to other parts of the scene. A BVH (Bounding Volume Hierarchy) is used for fast ray tracing, and the scene is exported from Blender using a custom add-on.
+Raytracer built using OpenCL and Pygame (to render the output to a window). It supports portals allowing for "non-Euclidean" rendering, where you can see through portals to other parts of the scene. A BVH (Bounding Volume Hierarchy) is used for fast ray tracing, and the scene is exported from Blender using a custom add-on.
 
 ![House Tour](./house_tour.gif)
 
