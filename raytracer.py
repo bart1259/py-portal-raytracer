@@ -23,7 +23,7 @@ small_font = pygame.font.Font("FreeSans.ttf", 16)
 
 os.environ["PYOPENCL_CTX"] = "0"
 
-OBJ_FILE = "teapot.obj"
+OBJ_FILE = "world.obj"
 
 with open(OBJ_FILE, "r") as f:
     lines = f.readlines()
@@ -514,7 +514,7 @@ knl = prg.render  # Get a handle to the kernel
 def render(camera_position, camera_angle=0.0, bvh_debug_depth=0):
     camera_fov = np.float32(60.0)
     camera_angle = np.float32(camera_angle)
-    camera_position = camera_position
+    camera_position = np.float32([camera_position[0], camera_position[1], camera_position[2], 0.0])
     triangle_count = np.int32(len(indices))  # Number of triangles
     bvh_debug_depth = np.int32(bvh_debug_depth)  # Number of BVH nodes
     portal_count = np.int32(len(portals))  # Number of portals

@@ -353,7 +353,7 @@ void check_portal_intersection(
 
 __kernel void render(
     float camera_fov, 
-    float3 camera_origin,
+    float4 camera_origin,
     float camera_angle,
     int bvh_debug_depth,
     __global float3* triangle_verticies_g,
@@ -394,7 +394,7 @@ __kernel void render(
                              sin_angle * ray_direction.x + cos_angle * ray_direction.z);
 
     // Create the ray origin
-    float3 ray_origin = camera_origin;
+    float3 ray_origin = camera_origin.xyz;
 
     float hit_dist = -1.0f;
     float3 hit_position = (float3)(0.0f, 0.0f, 0.0f);
